@@ -55,7 +55,7 @@ public class GestionMisiones {
         StringBuilder lista = new StringBuilder("\nLista de misiones:\n");
 
         while(!this.misiones.isEmpty()){
-            lista.append(this.misiones.toString());
+            lista.append(this.misiones);
         }
 
         return lista.toString();
@@ -84,5 +84,5 @@ public class GestionMisiones {
         return misionBuscada;
     }
 
-
+    pub
 }
