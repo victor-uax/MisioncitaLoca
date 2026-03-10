@@ -44,4 +44,13 @@ public class Mision {
     public boolean getCompletada(){
         return completada;
     }
+
+    @Override
+    public String toString(){
+        String resultado;
+
+        resultado = String.format(new String("Misión{ id: %d, nombre: %s, dificultad: %s, nivel recomendado: %d, recompensa experiencia: %d, completada %b"), id, nombre, dificultad, nivelRecomendado, recompensaExperiencia, completada);
+
+        return resultado;
+    }
 }
