@@ -49,7 +49,7 @@ public class GestionMisiones {
 
     /**
      * Devuelve un en una cadena de texto todas las misiones con su información
-     * @return
+     * @return String lista de las misiones
      */
     public String listarMisiones(){
         StringBuilder lista = new StringBuilder("\nLista de misiones:\n");
