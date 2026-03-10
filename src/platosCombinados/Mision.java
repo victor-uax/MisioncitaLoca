@@ -1,3 +1,5 @@
+package platosCombinados;
+
 public class Mision {
 
     // atributos
@@ -9,7 +11,7 @@ public class Mision {
     private boolean completada;
 
     /**
-     * Metodo constructor de la clase Mision
+     * Metodo constructor de la clase platosCombinados.Mision
      * @param id
      * @param nombre
      * @param dificultad
@@ -31,21 +33,21 @@ public class Mision {
     }
 
     /**
-     * Devuelve el nombre del objeto Mision
+     * Devuelve el nombre del objeto platosCombinados.Mision
      * @return String nombre
      */
     public String getNombre(){
         return nombre;
     }
     /**
-     * Devuelve la dificultad del objeto Mision
+     * Devuelve la dificultad del objeto platosCombinados.Mision
      * @return String dificultad
      */
     public String getDificultad(){
         return dificultad;
     }
     /**
-     * Devuelve el nivel recomendado del objeto Mision
+     * Devuelve el nivel recomendado del objeto platosCombinados.Mision
      * @return int nivelRecomendado
      */
     public int getNivelRecomendado(){

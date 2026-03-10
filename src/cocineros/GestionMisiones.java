@@ -1,3 +1,7 @@
+package cocineros;
+
+import platosCombinados.Mision;
+
 import java.util.ArrayList;
 
 public class GestionMisiones {
@@ -6,7 +10,7 @@ public class GestionMisiones {
     private ArrayList<Mision> misiones;
 
     /**
-     * Metodo constructor de la clase GestionMisiones
+     * Metodo constructor de la clase cocineros.GestionMisiones
      * Defino el ArrayList misiones
      */
     public GestionMisiones() {
@@ -42,4 +46,6 @@ public class GestionMisiones {
 
         return mision.getId();
     }
+
+
 }
