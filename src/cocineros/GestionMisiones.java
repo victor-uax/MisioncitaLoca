@@ -60,4 +60,26 @@ public class GestionMisiones {
 
         return lista.toString();
     }
+
+    /**
+     * Busca una Mision por su id en el ArrayList misiones mientras la condición
+     * seguirBuscando sea true y si la encuentra el boolean es false y se sale
+     * del while. Devuelve la Mision entera si la encuentra o null si no la encuentra
+     * @param id
+     * @return Mision misionBuscada si la encuentra o null si no la encuentra
+     */
+    public Mision buscarMisionPorId(int id){
+        Mision misionBuscada = null;
+        boolean seguirBuscando = true;
+
+        while(seguirBuscando) {
+            for (Mision misionActual : this.misiones) {
+                if (misionActual.getId() == id) {
+                    misionBuscada = misionActual;
+                    seguirBuscando = false;
+                }
+            }
+        }
+        return misionBuscada;
+    }
 }
