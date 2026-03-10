@@ -52,11 +52,16 @@ public class GestionMisiones {
      * @return String lista de las misiones
      */
     public String listarMisiones(){
-        StringBuilder lista = new StringBuilder("\nLista de misiones:\n");
+        StringBuilder lista;
 
-        while(!this.misiones.isEmpty()){
-            lista.append(this.misiones);
+        lista = new StringBuilder("\nLista de misiones:\n");
+
+        for( Mision mision : misiones){
+            lista.append("\t");
+            lista.append(this.misiones.toString());
+            lista.append("\n");
         }
+        lista.append("}");
 
         return lista.toString();
     }
@@ -74,9 +79,10 @@ public class GestionMisiones {
         int posicion = 0;
 
         while(!misiones.isEmpty() && seguirBuscando) {
+                misionBuscada = misiones.get(posicion);
 
-                if (misiones.get(posicion).getId() == id) {
-                    misionBuscada = misiones.get(posicion);
+                if (misionBuscada.getId() == id) {
+                    //misionBuscada = misiones.get(posicion);
                     seguirBuscando = false;
                 }
             posicion++;
@@ -84,5 +90,7 @@ public class GestionMisiones {
         return misionBuscada;
     }
 
-    pub
+public Mision eliminarMisionPorId(int id){
+
+}
 }
