@@ -47,5 +47,17 @@ public class GestionMisiones {
         return mision.getId();
     }
 
+    /**
+     * Devuelve un en una cadena de texto todas las misiones con su información
+     * @return
+     */
+    public String listarMisiones(){
+        StringBuilder lista = new StringBuilder("\nLista de misiones:\n");
 
+        while(!this.misiones.isEmpty()){
+            lista.append(this.misiones.toString());
+        }
+
+        return lista.toString();
+    }
 }
