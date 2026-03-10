@@ -71,15 +71,18 @@ public class GestionMisiones {
     public Mision buscarMisionPorId(int id){
         Mision misionBuscada = null;
         boolean seguirBuscando = true;
+        int posicion = 0;
 
-        while(seguirBuscando) {
-            for (Mision misionActual : this.misiones) {
-                if (misionActual.getId() == id) {
-                    misionBuscada = misionActual;
+        while(!misiones.isEmpty() && seguirBuscando) {
+
+                if (misiones.get(posicion).getId() == id) {
+                    misionBuscada = misiones.get(posicion);
                     seguirBuscando = false;
                 }
-            }
+            posicion++;
         }
         return misionBuscada;
     }
+
+
 }
