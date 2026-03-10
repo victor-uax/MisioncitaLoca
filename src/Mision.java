@@ -26,6 +26,22 @@ public class Mision {
         this.completada = completada;
     }
 
-
-
+    public int getId() {
+        return id;
+    }
+    public String getNombre(){
+        return nombre;
+    }
+    public String getDificultad(){
+        return dificultad;
+    }
+    public int getNivelRecomendado(){
+        return nivelRecomendado;
+    }
+    public int getRecompensaExperiencia(){
+        return recompensaExperiencia;
+    }
+    public boolean getCompletada(){
+        return completada;
+    }
 }
