@@ -29,12 +29,25 @@ public class Mision {
     public int getId() {
         return id;
     }
+
+    /**
+     * Devuelve el nombre del objeto Mision
+     * @return String nombre
+     */
     public String getNombre(){
         return nombre;
     }
+    /**
+     * Devuelve la dificultad del objeto Mision
+     * @return String dificultad
+     */
     public String getDificultad(){
         return dificultad;
     }
+    /**
+     * Devuelve el nivel recomendado del objeto Mision
+     * @return int nivelRecomendado
+     */
     public int getNivelRecomendado(){
         return nivelRecomendado;
     }
