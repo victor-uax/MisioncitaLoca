@@ -106,4 +106,23 @@ public class GestionMisiones {
         }
         return misionEliminada;
     }
+
+    /**
+     *      POLIMORFISMO:
+     *      - dos o más métodos
+     *      - tienen el mismo nombre
+     *      - no tienen por qué hacer lo mismo
+     *      - reciben distintos tipos de parámetros
+     * @param mision
+     * @return
+     */
+    public String eliminarMision(Mision mision){
+        String respuesta = "No se ha podido eliminar la misión " + mision;
+
+        if( mision != null ){
+            misiones.remove(mision);
+            respuesta = "Se ha eliminado correctamente la misión: ";
+        }
+        return respuesta + mision.toString();
+    }
 }
