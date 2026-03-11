@@ -90,7 +90,19 @@ public class GestionMisiones {
         return misionBuscada;
     }
 
-public Mision eliminarMisionPorId(int id){
+    /**
+     * Busca la misión por el id de la misma llamando al metodo buscarMisionPorId
+     * y luego guarda el valor del metodo en una variable Mision que va a devolver
+     * @param id de la Mision
+     * @return misionEliminada que va a ser la Mision entera si la encuentra o null
+     * si no lo encuentra
+     */
+    public Mision eliminarMisionPorId(int id){
+        Mision misionEliminada = null;
 
-}
+        if( buscarMisionPorId(id) != null ){
+            misionEliminada = buscarMisionPorId(id);
+        }
+        return misionEliminada;
+    }
 }
