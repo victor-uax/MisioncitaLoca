@@ -8,8 +8,8 @@ import java.util.Scanner;
 public class InterfazConsola {
 
     // atributos
-    private GestionMisiones gestor;
-    private Scanner sc;
+    private final GestionMisiones gestor;
+    private final Scanner sc;
 
     /**
      * Constructor del metodo
@@ -17,8 +17,13 @@ public class InterfazConsola {
      */
     public InterfazConsola(GestionMisiones gestor){
         this.gestor = gestor;
+        this.sc = new Scanner(System.in);
     }
 
+    /**
+     * Metodo que inicia la consola muestra el menú, lee la opción del usuario y realiza la
+     * opción elegida
+     */
     public void iniciar(){
         int opcion;
 
@@ -31,6 +36,9 @@ public class InterfazConsola {
         lanzarAccion(opcion);
     }
 
+    /**
+     * Imprime el menú que verá el usuario
+     */
     public void mostrarMenu(){
         System.out.println("\t MENÚ DE LA GESTIÓN DE MISIONES, BIENVENIDO CAPITÁN");
         System.out.println("================================================================");
@@ -45,6 +53,10 @@ public class InterfazConsola {
         System.out.println("¿Que desea hacer?");
     }
 
+    /**
+     * Mediante un escáner lee la opción elegida por el usuario y la devuelve
+     * @return int opcionElegida
+     */
     private int leerOpcion(){
         int opcion;
         //Scanner sc = new Scanner(System.in);
@@ -54,6 +66,10 @@ public class InterfazConsola {
        return opcion;
     }
 
+    /**
+     * Realiza la acción recibida
+     * @param opcion
+     */
     public void lanzarAccion(int opcion){
 
         switch(opcion){
@@ -72,10 +88,17 @@ public class InterfazConsola {
     // pedir distintos tipos de datos
     // llamar a las distintas funcionalidades del gestor
 
+    /**
+     * Metodo para mostrar textos en otros metodos
+     * @param texto
+     */
     private void accionMostrarTexto(String texto){
         System.out.println(texto);
     }
 
+    /**
+     * Crea la misión con sus diferentes atributos
+     */
     private void accionCrearMision(){
         int id;
         String nombre;
@@ -104,6 +127,11 @@ public class InterfazConsola {
         completada = false;
     }
 
+    /**
+     *
+     * @param mensaje
+     * @return
+     */
     private String pedirTexto(String mensaje){
         String respuesta;
         //Scanner sc = new Scanner(System.in);
@@ -123,5 +151,4 @@ public class InterfazConsola {
 
         return entero;
     }
-
 }
