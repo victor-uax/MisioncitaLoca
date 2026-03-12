@@ -119,18 +119,13 @@ public class InterfazConsola {
 
         recompensaExperiencia = pedirEntero("\tRecompensa experiencia: ");
 
-
-
-        System.out.println("\tRecompensa experiencia: ");
-        recompensaExperiencia = sc.nextInt();
-
         completada = false;
     }
 
     /**
-     *
+     * Imprime un mensaje y guarda la respuesta para el meotodo accionCrearMision porque el codigo se repite, en este caso sirve para los atributos de tipo String
      * @param mensaje
-     * @return
+     * @return String respuesta
      */
     private String pedirTexto(String mensaje){
         String respuesta;
@@ -142,6 +137,11 @@ public class InterfazConsola {
         return respuesta;
     }
 
+    /**
+     * Imprime un mensaje y guarda la respuesta para el meotodo accionCrearMision porque el codigo se repite, en este caso sirve para los atributos de tipo int
+     * @param mensaje
+     * @return int entero
+     */
     private int pedirEntero(String mensaje){
         int entero;
         //Scanner sc = new Scanner(System.in);
