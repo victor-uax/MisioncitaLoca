@@ -125,4 +125,13 @@ public class GestionMisiones {
         }
         return respuesta + mision.toString();
     }
+
+    /**
+     * Cuenta las misiones del array dinámico
+     * @return int numMisiones
+     */
+    public int contarMisiones(){
+        return misiones.size();
+    }
+
 }
